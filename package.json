@@ -1,0 +1,24 @@
+{
+  "name": "grocery-list",
+  "version": "1.0.0",
+  "description": "An express app using EJS template engine",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SereneMatt/grocery-list.git"
+  },
+  "author": "SereneMatt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SereneMatt/grocery-list/issues"
+  },
+  "homepage": "https://github.com/SereneMatt/grocery-list#readme",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}
