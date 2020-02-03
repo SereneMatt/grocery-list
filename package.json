@@ -4,7 +4,7 @@
   "description": "An express app using EJS template engine",
   "main": "app.js",
   "scripts": {
-    "test": "npm test"
+    "dev": "nodemon ./app.js"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,14 @@
   },
   "homepage": "https://github.com/SereneMatt/grocery-list#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
+    "mongodb": "^3.5.2",
+    "mongoose": "^5.8.11",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
