@@ -31,8 +31,17 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, '/public/')));
 app.use(bodyParser.urlencoded({extended: true}))
 
+let items;
+
 app.get('/', (req, res) => {
-  res.render('index', { heading: 'Grocery List' });
+  db.collection('items').find().toArray((err, results) => {
+    items = results.map(item => item.name);
+  });
+
+  res.render('index', { 
+    heading: 'Grocery List',
+    items: items
+  });
 });
 
 app.post('/item', (req, res) => {
