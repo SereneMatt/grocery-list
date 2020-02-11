@@ -50,8 +50,15 @@ app.post('/item', (req, res) => {
     if (err) {
       return handleError(err);
     }
-    console.log('Response', itemInstance);
-    res.redirect('/');
+    db.collection('items').find().toArray((err, results) => {
+      items = results.map(item => item.name);
+      console.log('execute');
+    });
+    console.log(items);
+    res.render('index', { 
+      heading: 'Grocery List',
+      items: items
+    });
   });
 });
 
